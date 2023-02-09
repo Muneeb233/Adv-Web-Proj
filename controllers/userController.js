@@ -22,7 +22,7 @@ const userCtrl = {
             // Save mongodb
             await newUser.save()
 
-            // Then create jsonwebtoken to authentication
+            //jsonwebtoken to authentication
             const accesstoken = createAccessToken({ id: newUser._id })
             const refreshtoken = createRefreshToken({ id: newUser._id })
 
