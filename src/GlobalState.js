@@ -6,7 +6,9 @@ export const GlobalState = createContext()
 
 
 export const DataProvider = ({ children }) => {
+
     const [token, setToken] = useState(false)
+    
     const refreshToken = async () => {
 
 
@@ -26,7 +28,7 @@ export const DataProvider = ({ children }) => {
     const state = {
         token: [token, setToken],
         productsAPI: ProductsAPI(),
-        userAPI:UserAPI(token)
+        userAPI: UserAPI(token)
     }
 
     return (
